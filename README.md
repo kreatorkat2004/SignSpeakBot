@@ -213,28 +213,21 @@ Hand Landmarks → Feature Engineering → TensorFlow Model → Classification �
 
 ### Development Testing
 ```bash
-# Run all tests
 npm run test
 
-# Run tests in watch mode
 npm run test:watch
 
-# Run integration tests
 npm run test:integration
 
-# Run performance tests
 npm run test:performance
 ```
 
 ### Model Testing
 ```bash
-# Test model accuracy
 npm run test:model
 
-# Benchmark inference speed
 npm run benchmark
 
-# Test with sample data
 npm run test:detection
 ```
 
@@ -262,26 +255,21 @@ npm run test:detection
 
 ### Environment Variables
 ```bash
-# Model Configuration
 NEXT_PUBLIC_MODEL_URL=https://cdn.example.com/models/
 NEXT_PUBLIC_MODEL_VERSION=v1.2.0
 
-# Performance Settings
 NEXT_PUBLIC_MAX_FPS=30
 NEXT_PUBLIC_CONFIDENCE_THRESHOLD=0.8
 
-# Analytics (Optional)
 NEXT_PUBLIC_ANALYTICS_ID=your-analytics-id
 NEXT_PUBLIC_ERROR_REPORTING=true
 
-# Development
 NEXT_PUBLIC_DEBUG_MODE=false
 NEXT_PUBLIC_SHOW_LANDMARKS=false
 ```
 
 ### Model Configuration
 ```typescript
-// lib/config/model.ts
 export const modelConfig = {
   handDetection: {
     maxNumHands: 2,
@@ -314,20 +302,15 @@ npm run analyze
 
 **Vercel (Recommended)**:
 ```bash
-# Install Vercel CLI
 npm i -g vercel
 
-# Deploy
 vercel
 
-# Production deployment
 vercel --prod
 ```
 
 **Netlify**:
 ```bash
-# Build command: npm run build
-# Publish directory: .next
 ```
 
 **Docker**:

@@ -20,23 +20,17 @@ export const useMediaPipe = () => {
   useEffect(() => {
     const loadMediaPipe = async () => {
       try {
-        // In a real implementation, you would load MediaPipe here
-        // For now, we'll simulate the loading and create mock data
-        
-        // Simulate loading time
+
         await new Promise(resolve => setTimeout(resolve, 1000))
         
-        // Mock MediaPipe hands detection
         const mockHands = {
           onResults: (callback: (results: any) => void) => {
-            // Simulate hand detection results
             setInterval(() => {
-              if (Math.random() > 0.7) { // 30% chance of detecting hands
+              if (Math.random() > 0.7) { 
                 const mockResults = {
                   multiHandLandmarks: [
-                    // Generate 21 landmarks for a hand
                     Array.from({ length: 21 }, (_, i) => ({
-                      x: 0.3 + Math.random() * 0.4, // Random position within reasonable bounds
+                      x: 0.3 + Math.random() * 0.4, 
                       y: 0.3 + Math.random() * 0.4,
                       z: Math.random() * 0.1 - 0.05
                     }))
@@ -53,7 +47,6 @@ export const useMediaPipe = () => {
 
         handsRef.current = mockHands
         
-        // Set up results handler
         mockHands.onResults((results: any) => {
           const detectedHands: Hand[] = []
           

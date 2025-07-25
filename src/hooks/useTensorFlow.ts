@@ -8,12 +8,9 @@ export const useTensorFlow = () => {
   useEffect(() => {
     const loadTensorFlow = async () => {
       try {
-        // Import TensorFlow.js dynamically
         const tf = await import('@tensorflow/tfjs')
         await tf.ready()
 
-        // In a real implementation, you would load your trained model here
-        // For now, we'll create a mock model interface
         const mockModel = {
           tensor2d: (data: number[][], shape: number[]) => ({
             dispose: () => {},
@@ -22,11 +19,10 @@ export const useTensorFlow = () => {
           predict: (input: any) => ({
             dispose: () => {},
             data: async () => {
-              // Mock prediction - return random probabilities for demo
               const numClasses = 25
               const probs = Array.from({ length: numClasses }, () => Math.random())
               const sum = probs.reduce((a, b) => a + b, 0)
-              return probs.map(p => p / sum) // Normalize to sum to 1
+              return probs.map(p => p / sum) 
             }
           })
         }
