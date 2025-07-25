@@ -1,0 +1,64 @@
+{
+  "signs": [
+    {
+      "id": "hello",
+      "name": "Hello",
+      "description": "A greeting gesture",
+      "category": "greetings"
+    },
+    {
+      "id": "thank_you",
+      "name": "Thank You",
+      "description": "Expression of gratitude",
+      "category": "courtesy"
+    },
+    {
+      "id": "please",
+      "name": "Please",
+      "description": "Polite request",
+      "category": "courtesy"
+    },
+    {
+      "id": "sorry",
+      "name": "Sorry",
+      "description": "Apology gesture",
+      "category": "courtesy"
+    },
+    {
+      "id": "yes",
+      "name": "Yes",
+      "description": "Affirmative response",
+      "category": "responses"
+    },
+    {
+      "id": "no",
+      "name": "No",
+      "description": "Negative response",
+      "category": "responses"
+    },
+    {
+      "id": "help",
+      "name": "Help",
+      "description": "Request for assistance",
+      "category": "actions"
+    },
+    {
+      "id": "stop",
+      "name": "Stop",
+      "description": "Halt or cease action",
+      "category": "actions"
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "description": "Movement or permission to proceed",
+      "category": "actions"
+    },
+    {
+      "id": "eat",
+      "name": "Eat",
+      "description": "Consumption of food",
+      "category": "daily_activities"
+    }
+  ]
+}
